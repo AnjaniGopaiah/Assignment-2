@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1-JS</title>
+    <style>
+        body{
+            background-color: beige;
+            text-align: center;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <label id="i1">Enter the Number:</label>
+    <input type="text" id="i2">
+    <p id="i3"></p>
+    <button onclick="reverse()" style="margin-top: 2%;">Click!</button>
+    <script>
+        function reverse(){
+            a=Number.parseInt(document.getElementById("i2").value);
+            var b=a; 
+            rev=0;
+            while(a!=0){
+                rem=a%10;
+                rev=rev*10+rem;
+                a=Math.floor(a/10);
+            }
+            document.getElementById("i3").innerHTML="Reverse of the Number "+ b +" is "+ rev;
+        }
+
+    </script>
+    
+    
+</body>
+</html>
